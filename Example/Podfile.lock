@@ -1,0 +1,16 @@
+PODS:
+  - PLAlertHud (0.1.0)
+
+DEPENDENCIES:
+  - PLAlertHud (from `../`)
+
+EXTERNAL SOURCES:
+  PLAlertHud:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PLAlertHud: 70e2edacd7188b989920bf608f3a2fc8c32d7941
+
+PODFILE CHECKSUM: a40c227b44967fa4145f267deb60eba4ee9a0991
+
+COCOAPODS: 1.9.1

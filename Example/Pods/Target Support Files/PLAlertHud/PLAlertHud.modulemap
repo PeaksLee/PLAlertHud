@@ -1,0 +1,6 @@
+framework module PLAlertHud {
+  umbrella header "PLAlertHud-umbrella.h"
+
+  export *
+  module * { export * }
+}

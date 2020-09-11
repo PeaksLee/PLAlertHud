@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'PLAlertHud_Example' do
+  pod 'PLAlertHud', :path => '../'
+
+  target 'PLAlertHud_Tests' do
+    inherit! :search_paths
+
+    
+  end
+  
+end

@@ -1,0 +1,27 @@
+{
+  "name": "PLAlertHud",
+  "version": "0.1.0",
+  "summary": "A short description of PLAlertHud.",
+  "description": "自定义弹框",
+  "homepage": "https://github.com/lifengfeng/PLAlertHud",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lifengfeng": "lifengfeng@zhongan.io"
+  },
+  "source": {
+    "git": "https://github.com/lifengfeng/PLAlertHud.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "PLAlertHud/Classes/**/*",
+  "resource_bundles": {
+    "PLAlertHud": [
+      "PLAlertHud/Assets/**/*"
+    ]
+  }
+}
