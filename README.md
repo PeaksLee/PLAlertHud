@@ -22,7 +22,7 @@ pod 'PLAlertHud'
 
 ## Author
 
-lifengfeng, lifengfeng@zhongan.io
+Peaks, 530044053@qq.com
 
 ## License
 
