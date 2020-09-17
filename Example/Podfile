@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'PLAlertHud_Example' do
   pod 'PLAlertHud', :path => '../'
+#  pod 'PLAlertHud', :git => 'https://github.com/PeaksLee/PLAlertHud.git', :tag => '0.1.0'
+
 
   target 'PLAlertHud_Tests' do
     inherit! :search_paths

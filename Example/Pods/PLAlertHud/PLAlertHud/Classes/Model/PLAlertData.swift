@@ -88,17 +88,4 @@ public class PLAlertData: NSObject {
         }
     }
     
-    //标题和信息数量
-    func textCount() -> Int {
-        var count: Int = 0
-        
-        if titelAttributeString != nil {
-            count += 1
-        }
-        if messageAttributeString != nil {
-            count += 1
-        }
-        return count
-    }
-    
 }

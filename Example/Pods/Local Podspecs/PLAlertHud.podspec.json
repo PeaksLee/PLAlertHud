@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "summary": "A short description of PLAlertHud.",
   "description": "自定义弹框",
-  "homepage": "https://github.com/lifengfeng/PLAlertHud",
+  "homepage": "https://github.com/PeaksLee/PLAlertHud.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "lifengfeng": "lifengfeng@zhongan.io"
+    "PeaksLee": "530044053@qq.com"
   },
   "source": {
-    "git": "https://github.com/lifengfeng/PLAlertHud.git",
+    "git": "https://github.com/PeaksLee/PLAlertHud.git",
     "tag": "0.1.0"
   },
   "platforms": {

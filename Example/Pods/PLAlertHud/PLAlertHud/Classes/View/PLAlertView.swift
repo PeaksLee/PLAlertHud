@@ -35,7 +35,7 @@ class PLAlertView: UIView, UITableViewDelegate, UITableViewDataSource {
         var y: CGFloat = 0
         let actionCount: Int = alertData?.actions.count ?? 0
         
-        if alertData!.textCount() == 0 {
+        if textCount() == 0 {
             textTableView?.removeFromSuperview()
         } else {
             let textContentHeight = textTableView?.contentSize.height ?? 0
@@ -165,7 +165,7 @@ class PLAlertView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (tableView == actionTableView ? alertData?.actions.count : alertData?.textCount()) ?? 0
+        return (tableView == actionTableView ? alertData?.actions.count : textCount()) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -219,4 +219,18 @@ class PLAlertView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         return textCell
     }
+    
+    func textCount() -> Int {
+        var count: Int = 0
+        
+        if alertData?.title != nil || alertData?.titelAttributeString != nil {
+            count += 1
+        }
+        
+        if alertData?.message != nil || alertData?.messageAttributeString != nil {
+            count += 1
+        }
+        return count
+    }
+    
 }

@@ -38,7 +38,7 @@ class PLActionSheetView: UIView, UITableViewDataSource, UITableViewDelegate {
         let otherCount: Int = alertData?.otherActions.count ?? 0
         let cancelViewHeight: CGFloat = alertData?.cancelAction != nil ? (CGFloat.Alert.ActionSheetMargin*2 + CGFloat.Alert.ActionHeight) : 0
 
-        if  alertData!.textCount() == 0 {
+        if  textCount() == 0 {
             textTableView?.removeFromSuperview()
         } else {
             let textContentHeight = textTableView?.contentSize.height ?? 0
@@ -54,7 +54,7 @@ class PLActionSheetView: UIView, UITableViewDataSource, UITableViewDelegate {
         
         if otherCount > 0 {
             
-            if alertData!.textCount() > 0 {
+            if textCount() > 0 {
                 let line: CALayer = CALayer()
                 line.backgroundColor = UIColor.SeparatorColor.cgColor
                 line.frame = CGRect(x: 0, y: y, width: CGFloat.Alert.ActionSheetContentWidth, height: CGFloat.Alert.SeparatorHeight)
@@ -141,7 +141,7 @@ class PLActionSheetView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (tableView == actionTableView ? alertData?.otherActions.count : alertData?.textCount() ?? 0) ?? 0
+        return (tableView == actionTableView ? alertData?.otherActions.count : textCount()) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -195,4 +195,19 @@ class PLActionSheetView: UIView, UITableViewDataSource, UITableViewDelegate {
         
         return textCell
     }
+    
+    func textCount() -> Int {
+        var count: Int = 0
+        
+        if alertData?.title != nil || alertData?.titelAttributeString != nil {
+            count += 1
+        }
+        
+        if alertData?.message != nil || alertData?.messageAttributeString != nil {
+            count += 1
+        }
+        return count
+    }
+    
+    
 }
