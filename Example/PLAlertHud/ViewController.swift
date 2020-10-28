@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBAction func clickButton(_ sender: Any) {
     
-        let _ = PLAlertHud.show("标题", message: "信息", .actionSheet, cancelTitle: "取消", ["确定"]) { (hud, isCancel, titile) in
+        let _ = PLAlertHud.show("标题", message: "信息", .alert, cancelTitle: "取消", ["确定"]) { (hud, isCancel, titile) in
             
         }
         

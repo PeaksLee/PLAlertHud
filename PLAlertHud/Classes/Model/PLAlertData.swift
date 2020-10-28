@@ -49,7 +49,7 @@ public class PLAlertData: NSObject {
         
         if let other = otherTitles {
             for (index, item) in other.enumerated() {
-                self.actions.append(PLAlertAction(title: item, style: index == 0 ? .Destructive : .Default))
+                self.actions.append(PLAlertAction(title: item, style: index == 0 ? .Preference : .Default))
             }
         }
         

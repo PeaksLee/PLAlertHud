@@ -8,7 +8,7 @@
 import UIKit
 
 public enum PLActionStyle: Int {
-    case Default = 0, Cancel, Destructive
+    case Default = 0, Cancel, Preference, Destructive
 }
 
 public struct PLAlertAction {
@@ -27,6 +27,9 @@ public struct PLAlertAction {
         case .Cancel:
             self.titleColor = UIColor.Action.Cancel
             self.titleFont = UIFont.Action.Cancel
+        case .Preference:
+            self.titleColor = UIColor.Action.Preference
+            self.titleFont = UIFont.Action.Preference
         case .Destructive:
             self.titleColor = UIColor.Action.Destructive
             self.titleFont = UIFont.Action.Destructive

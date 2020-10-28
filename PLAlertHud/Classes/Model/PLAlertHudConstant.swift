@@ -22,7 +22,7 @@ extension CGFloat {
         static let ActionHorizontalMargin: CGFloat = 12
         static let SeparatorHeight: CGFloat = (1/UIScreen.main.scale)
         static let AlertVerticalMargin: CGFloat = 60
-        static let coverAlpha: CGFloat = 0.7
+        static let coverAlpha: CGFloat = 0.55
         
         static let ActionSheetMargin: CGFloat = 8.0
         static let ActionSheetContentWidth: CGFloat = (CGFloat.ScreenWidth - CGFloat.Alert.ActionSheetMargin*2)
@@ -44,6 +44,8 @@ extension UIFont {
         static let Cancel: UIFont = UIFont.systemFont(ofSize: 17)
         /// 默认操作颜色
         static let Default: UIFont = UIFont.systemFont(ofSize: 17)
+        /// 优先选择颜色
+        static let Preference: UIFont = UIFont.systemFont(ofSize: 17, weight: .medium)
         /// 破坏性颜色
         static let Destructive: UIFont = UIFont.systemFont(ofSize: 17, weight: .medium)
     }
@@ -73,7 +75,9 @@ extension UIColor {
         static let Cancel: UIColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         /// 默认操作颜色
         static let Default: UIColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        /// 优先选择颜色
+        static let Preference: UIColor = #colorLiteral(red: 0.1490196078, green: 0.431372549, blue: 1, alpha: 1)
         /// 破坏性颜色
-        static let Destructive: UIColor = #colorLiteral(red: 0.1490196078, green: 0.431372549, blue: 1, alpha: 1)
+        static let Destructive: UIColor = #colorLiteral(red: 1, green: 0.1724903682, blue: 0.1813998288, alpha: 1)
     }
 }

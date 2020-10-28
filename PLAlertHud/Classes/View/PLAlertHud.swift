@@ -55,7 +55,7 @@ public class PLAlertHud: UIView, PLAlertHudDelegate {
             
             let popAnimation: CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "transform")
             popAnimation.duration = 0.6
-            popAnimation.values = [NSValue(caTransform3D: CATransform3DMakeScale(1.1, 1.1, 1.0)),
+            popAnimation.values = [NSValue(caTransform3D: CATransform3DMakeScale(1.05, 1.05, 1.0)),
                                    NSValue(caTransform3D: CATransform3DIdentity)]
             popAnimation.keyTimes = [0.1, 0.5]
             popAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -63,7 +63,7 @@ public class PLAlertHud: UIView, PLAlertHudDelegate {
         }
         
         UIApplication.shared.keyWindow?.addSubview(self)
-        UIView.animate(withDuration: 0.3) { self.coverView?.alpha = CGFloat.Alert.coverAlpha }
+        UIView.animate(withDuration: 0.2) { self.coverView?.alpha = CGFloat.Alert.coverAlpha }
     }
     
     @objc
@@ -93,7 +93,7 @@ public class PLAlertHud: UIView, PLAlertHudDelegate {
         
         coverView = UIView(frame: bounds)
         coverView?.backgroundColor = UIColor.Backgroud.Cover
-        coverView?.alpha = 0
+        coverView?.alpha = 0.1
         addSubview(coverView!)
         
         coverTap = UITapGestureRecognizer(target: self, action: #selector(hide))
